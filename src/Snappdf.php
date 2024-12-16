@@ -255,6 +255,8 @@ class Snappdf
 
         $process = new Process($commandInput);
 
+        $process->setTimeout(360);
+
         $process->run();
 
         if (!$process->isSuccessful()) {
